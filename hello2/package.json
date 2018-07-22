@@ -1,0 +1,14 @@
+{
+  "name": "hello-express",
+  "version": "1.0.0",
+  "description": "Simple Hello World express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Dolorito",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
