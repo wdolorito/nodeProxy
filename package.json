@@ -1,15 +1,22 @@
 {
   "name": "proxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example node proxy app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:wdolorito/nodeProxy.git"
   },
   "author": "William Dolorito",
   "license": "UNLICENSED",
   "dependencies": {
     "express": "^4.16.3",
     "express-http-proxy": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
