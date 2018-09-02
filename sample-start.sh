@@ -1,9 +1,10 @@
 #!/bin/sh
+NODE=./node_modules/nodemon/bin/nodemon.js
 for D in hello*
 do
   cd $D
-  node index.js&
+  ${NODE} index.js&
   cd ..
 done
 
-node index.js
+${NODE} index.js
