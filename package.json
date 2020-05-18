@@ -4,7 +4,12 @@
   "description": "Example node proxy app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "startone": "cd hello1 && npm start > /dev/null 2>&1 &",
+    "killone": "kill -9 `cat hello1.pid > /dev/null 2>&1` > /dev/null 2>&1 & rm -f hello1.pid > /dev/null 2>&1",
+    "starttwo": "cd hello2 && npm start > /dev/null 2>&1 &",
+    "killtwo": "kill -9 `cat hello2.pid > /dev/null 2>&1` > /dev/null 2>&1 & rm -f hello2.pid > /dev/null 2>&1",
+    "start": "npm run startone && npm run starttwo && node index.js",
+    "killall": "npm run killone && npm run killtwo"
   },
   "repository": {
     "type": "git",
@@ -13,10 +18,10 @@
   "author": "William Dolorito",
   "license": "UNLICENSED",
   "dependencies": {
-    "express": "^4.16.3",
-    "express-http-proxy": "^1.2.0"
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.19.4"
   }
 }

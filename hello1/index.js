@@ -4,6 +4,7 @@ const server = require('http').createServer(app)
 const router = require('./routes')
 const fs = require('fs')
 var port = 3000
+const pid = '../hello1.pid'
 
 try {
   port = fs.readFileSync(__dirname + '/port', 'utf8')
@@ -11,6 +12,12 @@ try {
 } catch (error) {
   console.log(error.stack)
 }
+
+fs.writeFile(pid, process.pid, err => {
+  if(err) {
+    console.log(err.stack)
+  }
+})
 
 app.use('/', router)
 
